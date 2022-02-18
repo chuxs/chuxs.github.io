@@ -1,0 +1,99 @@
+
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>JavaScript Form Validation Project</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="w3/w3.css"/>
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/fontawesome.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/fontawesome.min.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/regular.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/regular.min.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/brands.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/brands.min.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/solid.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/solid.min.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/svg-with-js.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/svg-with-js.min.css">
+   <!-- <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/v4-shims">
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/v4-shims.min.css">-->
+
+  </head>
+
+
+  <div class="container">
+    
+  
+   <h2 class="title">Validation form</h2>
+
+    <form class="form" id="form">
+
+        <div class="form-group">
+          <label>Username</label>
+          <input class="form-control "   type="text" placeholder="Username" id="username">
+          <i class="fa fa-check-circle"></i>
+          <i class="fa fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+        <div class="form-group">
+          <label>Email</label>
+          <input class="form-control"  type="email" placeholder="chuksanya@gmail.com"  id="email">
+          <i class="fa fa-check-circle"></i>
+          <i class="fa fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        
+        <div class="form-group">
+            <label>Password</label>
+            <input class="form-control" type="password"  placeholder="Password" id="password">
+            <i class="fa fa-check-circle"></i>
+            <i class="fa fa-exclamation-circle"></i>
+            <small id="strength">Error message</small>
+        </div>
+                  
+        <div class="form-group">
+            <label>Confirm Password</label>
+            <input class="form-control" type="password" placeholder="Enter your password again" id="passwordcheck">
+            <i class="fa fa-check-circle"></i>
+            <i class="fa fa-exclamation-circle"></i>
+            <small id="passnotsameerror">Error message</small>
+        </div>
+        
+        
+                
+        <div class="special">
+          <label> Gender </label><br>
+
+          <label>Male </label>
+          <input type="radio" id="gender_male" value="Male" name="gender">
+
+          <label>Female</label>
+          <input type="radio" id="gender_female" value="Female" name="gender">
+
+          <i id="check"  class="fa fa-check-circle"></i>
+          <i id="exclam"  class="fa fa-exclamation-circle"></i>
+          <br>
+          <small id="radiomessage">Error message</small>
+        </div>
+      
+        <!--Button-->
+        
+          <button type='submit' class="btn" id="signup">            
+            SignUp
+          </button>
+        
+    </form>
+  
+  </div> 
+
+  
+  <script src="script.js"></script>
+
+</html>

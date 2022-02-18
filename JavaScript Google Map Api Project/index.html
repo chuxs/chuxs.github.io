@@ -1,0 +1,81 @@
+<html>
+
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          
+          <title>JavaScript Google Map Api Project</title>
+
+          <link rel="stylesheet" href="style.css">
+          <link rel="stylesheet" href="w3/w3.css"/>
+          <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/fontawesome.css">
+          <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/fontawesome.min.css">
+          <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.css">
+          <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
+          <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/regular.css">
+          <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/regular.min.css">
+          <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/brands.css">
+          <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/brands.min.css">
+          <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/solid.css">
+          <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/solid.min.css">
+          <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/svg-with-js.css">
+          <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/svg-with-js.min.css">
+          
+
+        </head>
+
+  <body>
+
+    <div class="container">
+
+       <h2 class="title"> JavaScript Google Map Api Distance and Time Calculator   </h2>
+
+        <div class="toppart">
+          <div class="form">
+
+                <div class="form-area">
+                  <label >From  <i class="fa fa-dot-circle"></i></label>
+                  <input id="from" type="text">
+                </div>
+
+                <div class="form-area">
+                  <label >To  <i class="fa fa-map-marker-alt"></i></label>
+                  <input id="to" type="text">
+                </div>
+
+                <button type='submit' class="btn" onclick="calcRoute()">            
+                  Show Distance
+                  <i class="fa fa-directions"></i> 
+                </button>
+                <button type='submit' class="btn" onclick="clearPage()">            
+                  Clear
+                  <i class="fa fa-eraser"></i> 
+                </button>
+
+                
+          </div>
+
+                  <div class="form-result">
+                    <label class="display" id="output">The results will appear here!</label>
+
+                  </div>
+        </div>
+
+
+        <div class="container-fluid">
+          <div id="googleMap">
+
+          </div>
+
+        </div>
+
+    </div>
+
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjXqESM7ahhrfr6pi4m9pNjs4g1EIQyvY&libraries=places"></script>
+
+     <script src="app.js"></script>
+
+  </body>
+
+</html>

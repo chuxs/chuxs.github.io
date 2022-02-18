@@ -1,0 +1,177 @@
+/**p{
+    color: black;
+    font-family: 'Poppins',sans-serif;
+}*/
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.title{
+    color: black;
+    font-weight: bold;
+    font-family: 'Poppins',sans-serif;
+}
+
+
+form{
+    color: black;
+    font-family: 'Poppins',sans-serif;
+    font-size: 12px;
+}
+
+
+.container{
+    background-color: #fff;
+    border-radius: 5px;
+    border: #ADD8E6 solid 1px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    max-height: 100%;
+}
+
+h2{
+
+    border-bottom: 1px solid #fff;
+    padding: 10px 40px;
+}
+
+.form{
+    padding: 30px 40px;
+}
+
+/* normal group*/
+.form-group{
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.special{
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+/* normal group plus label*/
+.form-group label{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.special label{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+/* normal group plus input*/
+.form-group input{
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    padding: 8px;
+    width: 100%;
+}
+
+.form-group.success input{
+    border-color: rgb(75, 213, 20);
+}
+.form-group.error input{
+    border-color: rgb(242, 51, 18);
+}
+
+.special input{
+    display: inline-block;
+    width: 10%;
+}
+
+/* normal group plus i*/
+.form-group i{
+    visibility: hidden;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+}
+.special i{
+    visibility: hidden;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+}
+
+/** success and error symbol**/
+.form-group.success i.fa-check-circle{
+    visibility: visible;
+    color: #00FF00;
+}
+
+.form-group.error i.fa-exclamation-circle{
+    visibility: visible;
+    color: #FF0000;
+}
+
+.special.success i.fa-check-circle{
+    visibility: visible;
+
+}
+
+.special.error i.fa-exclamation-circle{
+    visibility: visible;
+   
+}
+
+
+
+/* normal group plus small*/
+.form-group small{
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+}
+.special small{
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+
+/* succcess and failure for the small text*/
+.form-group.success small{
+    visibility: visible;
+    color: #00FF00;
+}
+
+.form-group.error small{
+    visibility: visible;
+    color: #FF0000;
+}
+
+.special.success small{
+    visibility: visible;
+    color: #00FF00;
+}
+
+.special.error small{
+    visibility: visible;
+    color: #FF0000;
+}
+
+
+
+
+/** button**/
+.form button{
+    background-color:#fff;
+    padding: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    border:  #ADD8E6 3px solid;
+}
+.form button:hover{
+    background-color:  #ADD8E6;
+}
