@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,700;1,600&display=swap');
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container{
+    background-color: #fff;
+    border-radius: 5px;
+    border: #ADD8E6 solid 1px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    height: 500px;
+    max-height: 100%;
+    display: inline-block;
+}
+
+
+
+.container .display{
+    background-color: #fff;
+    border-radius: 5px;
+    border: #84cee7 solid 2px;
+    width: 380px;
+    height: 100px;
+    margin: 8px;
+    font-family: 'Poppins';
+    font-size: 40px;
+    text-align: right;
+}
+
+.container .display:focus{
+    outline-width: 0;
+}
+
+.history{
+    margin: 5px;
+    font-size: 15px;
+    color: gray;
+}
+
+.Solution{
+    margin-right: 5px;
+    margin-top: 20px;
+    height: 100px;
+}
+.buttons{
+    height: 380px;
+    width: 400px;
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    margin-left: 10px;
+   
+}
+
+.container .button{
+    border:#ADD8E6 solid 1px;
+    border-radius: 40%;
+    height: 50px;
+    width:  50px;
+    margin: 12px;
+    text-align: center;
+    font-family: 'Poppins';
+    font-weight: 550;  
+    cursor: pointer;
+}
+
+.container .button:hover{
+    background-color: rgb(171, 167, 167);
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.spbutton{
+    background-color: rgb(181, 162, 198);
+}
+
+.eqbutton{
+    background-color: rgb(129, 194, 129);
+}
+
+.bkbutton{
+    background-color: rgb(171, 167, 167);
+}
+
+.grbutton{
+    background-color: rgb(171, 167, 167);
+}

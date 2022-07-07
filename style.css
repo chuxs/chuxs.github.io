@@ -270,7 +270,7 @@ section .title::after{
 
 .projects .project-content .card{
     width: calc(33% - 20px);
-    border: 2px solid#99daf0;
+    border: 2px solid #99daf0;
     text-align: center;
     border-radius: 8px;
     padding: 20px 25px;
@@ -506,7 +506,7 @@ section .title::after{
 }
 
 .contact .right form .button button:hover{
-    border: 2px solid#6ed9fd;
+    border: 2px solid #6ed9fd;
     background: #fff;
     color: #333;
     
