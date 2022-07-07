@@ -1,0 +1,147 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Traffic Light Simulator</title>
+
+  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="w3/w3.css" /> -->
+  <!-- <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/fontawesome.css">
+  <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/fontawesome.min.css">
+  <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.css">
+  <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
+  <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/regular.css">
+  <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/regular.min.css">
+  <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/brands.css">
+  <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/brands.min.css">
+  <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/solid.css">
+  <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/solid.min.css">
+  <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/svg-with-js.css">
+  <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/svg-with-js.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css"> -->
+  <!-- <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/v4-shims">
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/v4-shims.min.css">-->
+
+</head>
+
+<div class="buttonwrap">
+  <button class="s start" id="start" onclick="changeColorGreen()">
+    <p>Start</p>
+  </button>
+
+  <button class="s stop" id="stop" onclick="stopActivities()">
+    <p>Stop</p>
+  </button>
+
+</div>
+
+<div class="road-container">
+
+  <!-------First Traffic light-->
+  <div class="fristTL">
+    <div class="a" id="agreen">
+
+    </div>
+
+    <div class="a" id="aamber">
+
+    </div>
+
+    <div class="a" id="ared">
+
+    </div>
+
+    <p class="aNum" id="angreen">00</p>
+
+    <p class="aNum" id="anamber">00</p>
+
+    <p class="aNum" id="anred">00</p>
+  </div>
+
+  <!---3rd and 4th traffic light combined-->
+  <div class="tl3n4com">
+
+    <!-------Third Traffic Light----->
+    <div class="thirdTL">
+
+      <div class="c green">
+
+      </div>
+
+      <div class="c amber">
+
+      </div>
+
+      <div class="c red">
+
+      </div>
+
+      <p class="cNum green">00</p>
+
+      <p class="cNum amber">00</p>
+
+      <p class="cNum red">00</p>
+
+    </div>
+
+    <!-------Fourth Traffic Light----->
+    <div class="fourthTL">
+
+      <div class="d green">
+
+      </div>
+
+      <div class="d amber">
+
+      </div>
+
+      <div class="d red">
+
+      </div>
+
+      <p class="dNum green">00</p>
+
+      <p class="dNum amber">00</p>
+
+      <p class="dNum red">00</p>
+
+    </div>
+  </div>
+
+
+  <!-------Second Traffic light-->
+  <div class="secondTL">
+
+    <div class="b green">
+
+    </div>
+
+    <div class="b amber">
+
+    </div>
+
+    <div class="b red">
+
+    </div>
+
+    <p class="bNum green">00</p>
+
+    <p class="bNum amber">00</p>
+
+    <p class="bNum red">00</p>
+
+  </div>
+
+
+
+
+</div>
+
+
+
+
+<script src="script.js"> </script>
+
+</html>
