@@ -108,9 +108,13 @@ onChildAdded(newMsg, (data) => {
     html += messData;
     html += timeData;
     html += "</li>"; 
-  
 
-  document.getElementById("dmessages").innerHTML += html;
+    var line = "";
+    line += "<div class='line' >";
+    line += html;
+    line +="</div>";  
+
+  document.getElementById("dmessages").innerHTML += line;
   }
   else{
     const senderdata2 = data.val().sender;
@@ -139,9 +143,14 @@ onChildAdded(newMsg, (data) => {
     html += messData;
     html += timeData;
     html += "</li>"; 
+
+    var line = "";
+    line += "<div class='line' >";
+    line += html;
+    line +="</div>";  
   
 
-  document.getElementById("dmessages").innerHTML += html;
+  document.getElementById("dmessages").innerHTML += line;
   }
 
 });
