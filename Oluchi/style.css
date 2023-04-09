@@ -359,6 +359,23 @@ section .heading h2 {
     background: #5c3f2e;
 }
 
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 35px;
+    background: #bd937a;
+    right: 30px;
+    bottom: 10px;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 99;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+    transition: all 0.3s ease;
+}
 
 /* Making the site responsive */
 
@@ -380,7 +397,7 @@ section .heading h2 {
 
     header .navbar {
         position: absolute;
-        top: 0;
+        top: -400px;
         left: 0;
         right: 0;
         display: flex;
@@ -388,7 +405,7 @@ section .heading h2 {
         text-align: center;
         background: #201408;
         transition: .3s;
-        visibility: hidden;
+        /* visibility: hidden; */
     }
 
     header .navbar.active {
