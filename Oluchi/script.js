@@ -50,4 +50,5 @@ function changeIcon(memuarrow) {
 
 window.onscroll = () => {
     navbar.classList.remove("active");
+    // document.getElementById(menu-icon).className = "bx bx-menu";
 };
