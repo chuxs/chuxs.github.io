@@ -423,7 +423,7 @@ section .heading h2 {
     }
 
     body header {
-        padding: 25px 50px;
+        padding: 25px 30px;
     }
 
 }
@@ -453,7 +453,7 @@ section .heading h2 {
     }
 
     .logo {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .home-text {
