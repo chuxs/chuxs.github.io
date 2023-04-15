@@ -1,20 +1,20 @@
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      document.getElementById("navbar").style.top = "0";
-      
+        document.getElementById("navbar").style.top = "0";
+
     } else {
-      document.getElementById("navbar").style.top = "-50px";
-      
+        document.getElementById("navbar").style.top = "-50px";
+
     }
 }
 
-window.onscroll = function() {anotherScrollFunction()};
+window.onscroll = function () { anotherScrollFunction() };
 
 function anotherScrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         document.getElementById("supbtn").style.display = "block";
     }
-    else{
+    else {
         document.getElementById("supbtn").style.display = "none";
     }
 }
@@ -27,9 +27,26 @@ function topFunction() {
 let menu = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");
 
-menu.addEventListener("click", function (){
+// menu.addEventListener("click", function () {
+//     navbar.classList.toggle("active")
+//     // menu.classList = "bx bx-right-arrow-alt"; bx bx-menu
+//     if (document.getElementById(menu-icon).className == "bx bx-menu") {
+//         document.getElementById(menu-icon).className = "bx bx-right-arrow-alt";
+//     }
+//     else {
+//         document.getElementById(menu-icon).className = "bx bx-menu"
+//     }
+// });
+
+function changeIcon(memuarrow) {
     navbar.classList.toggle("active")
-});
+    if (document.getElementById(memuarrow).className == "bx bx-menu") {
+                document.getElementById(memuarrow).className = "bx bx-right-arrow-alt";
+            }
+            else {
+                document.getElementById(memuarrow).className = "bx bx-menu";
+            }
+}
 
 window.onscroll = () => {
     navbar.classList.remove("active");
