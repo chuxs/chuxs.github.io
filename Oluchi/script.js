@@ -24,7 +24,8 @@ function topFunction() {
     document.documentElement.scrollTop = 0;
 }
 
-let menu = document.querySelector("#menu-icon");
+// let menu = document.get("#menu-icon");
+let menu = document.getElementById("menu-icon")
 let navbar = document.querySelector(".navbar");
 
 // menu.addEventListener("click", function () {
@@ -52,3 +53,11 @@ window.onscroll = () => {
     navbar.classList.remove("active");
     // document.getElementById(menu-icon).className = "bx bx-menu";
 };
+
+body.addEventListener("click", clicker);
+
+function clicker() {
+    if (menu.className == "bx bx-right-arrow-alt") {
+        menu.className = "bx bx-menu";
+    }
+}
