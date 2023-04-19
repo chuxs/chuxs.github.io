@@ -359,7 +359,7 @@ section .heading h2 {
     background: #5c3f2e;
 }
 
-.scroll-up-btn{
+.scroll-up-btn {
     position: fixed;
     height: 45px;
     width: 35px;
@@ -375,6 +375,17 @@ section .heading h2 {
     cursor: pointer;
     display: none;
     transition: all 0.3s ease;
+}
+
+.pop-up {
+    display: block;
+    position: fixed;
+    bottom: 50%;
+    align-items: center;
+    justify-content: center;
+    right: 35%;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
 }
 
 /* Making the site responsive */
@@ -499,6 +510,31 @@ section .heading h2 {
     .main .col .title::before {
         margin-left: 2%;
     }
+
+    .pop-up {
+        display: block;
+        position: fixed;
+        bottom: 50%;
+        align-items: center;
+        justify-content: center;
+        right: 35%;
+        border: 3px solid #f1f1f1;
+        z-index: 9;
+    }
+
+    .pop-up {
+        display: block;
+        position: fixed;
+        bottom: 5%;
+        align-items: center;
+        justify-content: center;
+        right: 10%;
+        border: 3px solid #f1f1f1;
+        z-index: 9;
+        width: 350px;
+        height: 550px;
+    }
+    
 }
 
 @media (max-width: 960px) {
@@ -549,6 +585,20 @@ section .heading h2 {
         margin-left: 3%;
     }
 
+    .pop-up {
+        display: block;
+        position: fixed;
+        bottom: 5%;
+        align-items: center;
+        justify-content: center;
+        right: 20%;
+        border: 3px solid #f1f1f1;
+        z-index: 9;
+        width: 350px;
+        height: 550px;
+    }
+    
+
 }
 
 @media (max-width: 575px) {
@@ -556,7 +606,7 @@ section .heading h2 {
         width: 100%;
     }
 
-    .col h4{
+    .col h4 {
         font-size: small;
     }
 
@@ -567,5 +617,24 @@ section .heading h2 {
     .main .col .social {
         margin-top: 30%;
     }
+
+    .pop-up {
+        display: flex;
+        position: fixed;
+        bottom: 5%;
+        align-items: center;
+        justify-content: center;
+        right: 5%;
+        border: 3px solid #f1f1f1;
+        z-index: 9;
+        width: 350px;
+        height: 550px;
+    }
+    
+
+}
+
+@media (max-width: 575px) {
+
 
 }
