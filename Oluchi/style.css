@@ -377,15 +377,72 @@ section .heading h2 {
     transition: all 0.3s ease;
 }
 
-.pop-up {
-    display: block;
+#popup{
     position: fixed;
-    bottom: 50%;
-    align-items: center;
-    justify-content: center;
-    right: 35%;
-    border: 3px solid #f1f1f1;
-    z-index: 9;
+    left: 0;
+    top: 30;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    display: none;
+}
+
+#popup.show{
+    opacity: 1;
+    display: block;
+}
+
+.popup-content{
+    position: relative;
+    background-color: white;
+    margin: 100px auto;
+    padding: 0;
+    border: 1px solid #5c3f2e;
+    width: 700px;
+    max-width: 87%;
+    animation: open 0.5s ease;
+}
+
+@keyframes open{
+    from{
+        transform: scale(0);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.popup-header{
+    padding: 2px 16px;
+    background-color: #201408;
+    color: #5c3f2e;
+    display: flex;
+}
+
+.popup-header h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.close-btn{
+    position: absolute;
+    color: #5c3f2e;
+    right: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 8px;
+    padding: 1px 5px;
+    cursor: pointer;
+}
+
+.popup-body{
+    padding: 2px 16px;
 }
 
 /* Making the site responsive */
@@ -510,31 +567,6 @@ section .heading h2 {
     .main .col .title::before {
         margin-left: 2%;
     }
-
-    .pop-up {
-        display: block;
-        position: fixed;
-        bottom: 50%;
-        align-items: center;
-        justify-content: center;
-        right: 35%;
-        border: 3px solid #f1f1f1;
-        z-index: 9;
-    }
-
-    .pop-up {
-        display: block;
-        position: fixed;
-        bottom: 5%;
-        align-items: center;
-        justify-content: center;
-        right: 10%;
-        border: 3px solid #f1f1f1;
-        z-index: 9;
-        width: 350px;
-        height: 550px;
-    }
-    
 }
 
 @media (max-width: 960px) {
@@ -585,20 +617,6 @@ section .heading h2 {
         margin-left: 3%;
     }
 
-    .pop-up {
-        display: block;
-        position: fixed;
-        bottom: 5%;
-        align-items: center;
-        justify-content: center;
-        right: 20%;
-        border: 3px solid #f1f1f1;
-        z-index: 9;
-        width: 350px;
-        height: 550px;
-    }
-    
-
 }
 
 @media (max-width: 575px) {
@@ -618,23 +636,11 @@ section .heading h2 {
         margin-top: 30%;
     }
 
-    .pop-up {
-        display: flex;
-        position: fixed;
-        bottom: 5%;
-        align-items: center;
-        justify-content: center;
-        right: 5%;
-        border: 3px solid #f1f1f1;
-        z-index: 9;
-        width: 350px;
-        height: 550px;
+    #popup{
+        top: -20;
     }
-    
-
 }
 
 @media (max-width: 575px) {
-
 
 }
