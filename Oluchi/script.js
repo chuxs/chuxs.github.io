@@ -81,10 +81,7 @@ for (i = 0; i < close.length; i++) {
 
 // add items to cart
 var priceSum = 0;
-
 var price = 0;
-
-
 
 function addToCart() {
     var li = document.createElement("li");
@@ -117,11 +114,7 @@ function addToCart() {
         console.log(price); // Output: 19.99
         priceSum = priceSum + price;
         document.getElementById("totalPrice").innerHTML = "Total $" + priceSum;
-        // console.log(totalprice);
-         // var totalprice = document.getElementById("totalPrice").innerHTML;
     }
-
-
 }
 
 // body.addEventListener("click", clicker);
