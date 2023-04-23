@@ -67,6 +67,66 @@ window.onscroll = () => {
     // document.getElementById(menu-icon).className = "bx bx-menu";
 };
 
+
+
+// Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+    close[i].onclick = function () {
+        var div = this.parentElement;
+        div.style.display = "none";
+    }
+}
+
+// add items to cart
+var priceSum = 0;
+
+var price = 0;
+
+
+
+function addToCart() {
+    var li = document.createElement("li");
+    var inputValue = document.getElementById(event.currentTarget.id).innerHTML;
+    var t = document.createTextNode(inputValue);
+
+    // var totalprice = document.getElementById("totalPrice").innerHTML;
+
+    li.appendChild(t);
+    document.getElementById("myUL").appendChild(li);
+
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    li.appendChild(span);
+
+    for (i = 0; i < close.length; i++) {
+        close[i].onclick = function () {
+            var div = this.parentElement;
+            div.style.display = "none";
+        }
+    }
+    // getting the price of the food item
+    const priceRegex = /\d+(\.\d{1,2})?/;
+    const matches = inputValue.match(priceRegex);
+    if (matches && matches.length > 0) {
+        // const price = parseFloat(matches[0]);
+        price = parseFloat(matches[0]);
+        console.log(price); // Output: 19.99
+        var totalprice = document.getElementById("totalPrice").innerHTML;
+        priceSum = priceSum + price;
+        totalprice = totalprice + priceSum;
+        console.log(totalprice);
+        // priceSum = priceSum + price;
+        // totalprice = totalprice + priceSum;
+        // console.log(totalprice);
+    }
+
+
+}
+
 // body.addEventListener("click", clicker);
 // function clicker() {
 //     if (menu.className == "bx bx-right-arrow-alt") {
@@ -86,56 +146,27 @@ window.onscroll = () => {
 //     myNodelist[i].appendChild(span);
 // }
 
-// Click on a close button to hide the current list item
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-    close[i].onclick = function () {
-        var div = this.parentElement;
-        div.style.display = "none";
-    }
-}
 
 // Create a new list item when clicking on the "Add" button
-function shrimp() {
-    
-    var li = document.createElement("li");
-    var inputValue = document.getElementById("shrimps").innerHTML;
-    var t = document.createTextNode(inputValue);
-    li.appendChild(t);
-    document.getElementById("myUL").appendChild(li);
+// function shrimp() {
 
-    var span = document.createElement("SPAN");
-    var txt = document.createTextNode("\u00D7");
-    span.className = "close";
-    span.appendChild(txt);
-    li.appendChild(span);
+//     var li = document.createElement("li");
+//     var inputValue = document.getElementById("shrimps").innerHTML;
+//     var t = document.createTextNode(inputValue);
+//     li.appendChild(t);
+//     document.getElementById("myUL").appendChild(li);
 
-    for (i = 0; i < close.length; i++) {
-        close[i].onclick = function () {
-            var div = this.parentElement;
-            div.style.display = "none";
-        }
-    }
-}
+//     var span = document.createElement("SPAN");
+//     var txt = document.createTextNode("\u00D7");
+//     span.className = "close";
+//     span.appendChild(txt);
+//     li.appendChild(span);
 
-function addToCart() {
-    var li = document.createElement("li");
-    var inputValue = document.getElementById(event.currentTarget.id).innerHTML;
-    var t = document.createTextNode(inputValue);
-    li.appendChild(t);
-    document.getElementById("myUL").appendChild(li);
+//     for (i = 0; i < close.length; i++) {
+//         close[i].onclick = function () {
+//             var div = this.parentElement;
+//             div.style.display = "none";
+//         }
+//     }
+// }
 
-    var span = document.createElement("SPAN");
-    var txt = document.createTextNode("\u00D7");
-    span.className = "close";
-    span.appendChild(txt);
-    li.appendChild(span);
-
-    for (i = 0; i < close.length; i++) {
-        close[i].onclick = function () {
-            var div = this.parentElement;
-            div.style.display = "none";
-        }
-    }
-}
