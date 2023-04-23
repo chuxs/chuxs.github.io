@@ -203,6 +203,7 @@ section .heading h2 {
 .menu .menu-container .box ul li {
     list-style: circle;
     color: #bd937a;
+    cursor: pointer;
 }
 
 .menu .menu-container {
@@ -420,7 +421,7 @@ section .heading h2 {
 .popup-header{
     padding: 2px 16px;
     background-color: #201408;
-    color: #5c3f2e;
+    color: white;
     display: flex;
 }
 
@@ -444,6 +445,37 @@ section .heading h2 {
 .popup-body{
     padding: 2px 16px;
 }
+
+.popup-footer{
+    padding: 15px;
+    color: #5c3f2e;
+}
+
+.popup-footer h3{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    display: flex;
+}
+
+.print{
+    position: absolute;
+    cursor: pointer;
+    right: 15px;
+    /* top: 110; */
+    /* margin-top: px; */
+    background: #5c3f2e;
+    color: white;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.close {
+    position: absolute;
+    right: 0;
+    /* top: 0; */
+    padding: 2px 30px 12px 16px;
+    cursor: pointer;
+  }
 
 /* Making the site responsive */
 

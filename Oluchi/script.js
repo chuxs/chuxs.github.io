@@ -73,3 +73,69 @@ window.onscroll = () => {
 //         menu.className = "bx bx-menu";
 //     }
 // }
+
+// Create a "close" button and append it to each list item
+// var myNodelist = document.getElementsByClassName("LI");
+// var i;
+// for (i = 0; i < myNodelist.length; i++) {
+//     var span = document.createElement("SPAN");
+//     var txt = document.createTextNode("\u00D7");
+//     span.className = "close";
+//     span.style.cursor = "pointer";
+//     span.appendChild(txt);
+//     myNodelist[i].appendChild(span);
+// }
+
+// Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+    close[i].onclick = function () {
+        var div = this.parentElement;
+        div.style.display = "none";
+    }
+}
+
+// Create a new list item when clicking on the "Add" button
+function shrimp() {
+    
+    var li = document.createElement("li");
+    var inputValue = document.getElementById("shrimps").innerHTML;
+    var t = document.createTextNode(inputValue);
+    li.appendChild(t);
+    document.getElementById("myUL").appendChild(li);
+
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    li.appendChild(span);
+
+    for (i = 0; i < close.length; i++) {
+        close[i].onclick = function () {
+            var div = this.parentElement;
+            div.style.display = "none";
+        }
+    }
+}
+
+function addToCart() {
+    var li = document.createElement("li");
+    var inputValue = document.getElementById(event.currentTarget.id).innerHTML;
+    var t = document.createTextNode(inputValue);
+    li.appendChild(t);
+    document.getElementById("myUL").appendChild(li);
+
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    li.appendChild(span);
+
+    for (i = 0; i < close.length; i++) {
+        close[i].onclick = function () {
+            var div = this.parentElement;
+            div.style.display = "none";
+        }
+    }
+}

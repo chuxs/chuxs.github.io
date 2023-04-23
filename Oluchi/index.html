@@ -33,7 +33,7 @@
                <li><a href="#menu">Menu</a></li>
                <li><a href="#order">Order</a></li>
                <li><a href="#contact">Contact</a></li>
-               <li><a id="cartbtn"  href="#cart"><i class='bx bxs-cart'></i></a></li>
+               <li><a id="cartbtn" href="#cart"><i class='bx bxs-cart'></i></a></li>
           </ul>
      </header>
 
@@ -73,55 +73,56 @@
      <section class="menu" id="menu">
           <div class="heading">
                <span>Food Menu</span>
-               <h2>Fresh taste and great price</h2>
+               <!-- <h2>Fresh taste and great price</h2> -->
+               <h2>Click on an item to add to Cart</h2>
           </div>
 
           <div class="menu-container">
                <div class="box">
                     <ul>
-                         <li href="#">Shrimps $5</li>
-                         <li href="#">Chicken $5</li>
-                         <li href="#">Beef $5</li>
-                         <li href="#">Gizzard $5</li>
-                         <li href="#">Salmon $8</li>
+                         <li onclick="addToCart()" id="shrimps" >Shrimps $5</li>
+                         <li onclick="addToCart()" id="chicken" >Chicken $5</li>
+                         <li onclick="addToCart()" id="beef" >Beef $5</li>
+                         <li onclick="addToCart()" id="gizzard" >Gizzard $5</li>
+                         <li onclick="addToCart()" id="salmon" >Salmon $8</li>
                          <!-- <li href="#">Tilapia Fish $5</li> -->
                     </ul>
                </div>
 
                <div class="box">
                     <ul>
-                         <li href="#">Fried Rice $20</li>
-                         <li href="#">Jellof Rice $25</li>
-                         <li href="#">Banga Rice $25</li>
-                         <li href="#">Coconut Rice $20</li>
-                         <li href="#">Pasta $30</li>
+                         <li onclick="addToCart()" id="fired" >Fried Rice $20</li>
+                         <li onclick="addToCart()" id="jellof" >Jellof Rice $25</li>
+                         <li onclick="addToCart()" id="banga" >Banga Rice $25</li>
+                         <li onclick="addToCart()" id="coconu" >Coconut Rice $20</li>
+                         <li onclick="addToCart()" id="pasta" >Pasta $30</li>
                     </ul>
                </div>
                <div class="box">
                     <ul>
-                         <li href="#">Okra soup</li>
-                         <li href="#">Afang soup</li>
-                         <li>Banga soup</li>
-                         <li>Egusi soup</li>
-                         <li>Efo Riro</li>
+                         <li onclick="addToCart()" id="okra" >Okra soup</li>
+                         <li onclick="addToCart()" id="afang" >Afang soup</li>
+                         <li onclick="addToCart()" id="banga" >Banga soup</li>
+                         <li onclick="addToCart()" id="Egusi" >Egusi soup</li>
+                         <li onclick="addToCart()" id="Efo" >Efo Riro</li>
 
                     </ul>
                </div>
                <div class="box">
                     <ul>
-                         <li>Cat fish pepper soup</li>
-                         <li>Goat meat pepper soup</li>
-                         <li>Chicken pepper soup </li>
+                         <li onclick="addToCart()" id="cat-fish-psoup" >Cat fish pepper soup</li>
+                         <li onclick="addToCart()" id="goat-psoup" >Goat meat pepper soup</li>
+                         <li onclick="addToCart()" id="salmon-psoup" >Chicken pepper soup </li>
 
                     </ul>
                </div>
                <div class="box">
                     <ul>
-                         <li>Moi Moi (Fish, Egg, Minced Meat)</li>
-                         <li>Beef potatoes (minced meat, stew beef)</li>
-                         <li>Chicken potatoes (minced chicken, wings)</li>
-                         <li>Plantain porridge</li>
-                         <li>Bole</li>
+                         <li onclick="addToCart()" id="moi" >Moi Moi (Fish, Egg, Minced Meat)</li>
+                         <li onclick="addToCart()" id="beef-pot" >Beef potatoes (minced meat, stew beef)</li>
+                         <li onclick="addToCart()" id="chicken-pot" >Chicken potatoes (minced chicken, wings)</li>
+                         <li onclick="addToCart()" id="plantain-por" >Plantain porridge</li>
+                         <li onclick="addToCart()" id="Bole" >Bole</li>
 
                     </ul>
                </div>
@@ -207,14 +208,13 @@
                     <span class="close-btn"><i class='bx bx-x'></i></span>
                </div>
                <div class="popup-body">
-                    <p>There are many variations of passages of Lorem Ipsum available, 
-                         but the majority have suffered alteration in some form, by injected humour, 
-                         or randomised words which don't look even slightly believable. 
-                         If you are going to use a passage of Lorem Ipsum, 
-                         you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                    <ul id="myUL">
+                         <li></li>
+                    </ul>
                </div>
                <div class="popup-footer">
-                    <h3>you need to be sure there isn't</h3>
+                    <h3>Total:</h3>
+                    <span class="print">Print and Send to us</span>
                </div>
           </div>
      </section>
