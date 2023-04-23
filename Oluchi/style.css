@@ -447,14 +447,14 @@ section .heading h2 {
 }
 
 .popup-footer{
-    padding: 15px;
+    padding: 2px 16px;
     color: #5c3f2e;
+    display: flex;
 }
 
 .popup-footer h3{
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
-    display: flex;
 }
 
 .print{
@@ -462,10 +462,10 @@ section .heading h2 {
     cursor: pointer;
     right: 15px;
     /* top: 110; */
-    /* margin-top: px; */
+    margin-top: 10px;
     background: #5c3f2e;
     color: white;
-    padding: 5px;
+    padding: 5px 5px;
     border-radius: 8px;
 }
 
