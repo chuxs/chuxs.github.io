@@ -115,13 +115,10 @@ function addToCart() {
         // const price = parseFloat(matches[0]);
         price = parseFloat(matches[0]);
         console.log(price); // Output: 19.99
-        var totalprice = document.getElementById("totalPrice").innerHTML;
         priceSum = priceSum + price;
-        totalprice = totalprice + priceSum;
-        console.log(totalprice);
-        // priceSum = priceSum + price;
-        // totalprice = totalprice + priceSum;
+        document.getElementById("totalPrice").innerHTML = "Total $" + priceSum;
         // console.log(totalprice);
+         // var totalprice = document.getElementById("totalPrice").innerHTML;
     }
 
 
