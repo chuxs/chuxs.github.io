@@ -135,6 +135,83 @@ function addToCart() {
     }
 }
 
+//Convert the list of items to an image and download it
+// function imageDownload() {
+
+//     console.log("i am being clicked!")
+//     // Get the section element by its ID
+//     const sectionElement = document.getElementById('popup');
+
+//     // Create a canvas element
+//     const canvas = document.createElement('canvas');
+//     const context = canvas.getContext('2d');
+
+//     // Set the canvas size to match the section element's dimensions
+//     canvas.width = sectionElement.offsetWidth;
+//     canvas.height = sectionElement.offsetHeight;
+
+//     // Create an image element
+//     const image = new Image();
+
+//     // Convert the section content to a data URL
+//     const svgData = new XMLSerializer().serializeToString(sectionElement);
+//     const svgBlob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
+//     const svgUrl = URL.createObjectURL(svgBlob);
+
+//     // Set the image source to the SVG URL
+//     image.src = svgUrl;
+
+//     // Wait for the image to load
+//     image.onload = () => {
+//         // Draw the image onto the canvas
+//         context.drawImage(image, 0, 0);
+
+//         // Convert the canvas to a data URL
+//         const dataURL = canvas.toDataURL('image/png');
+
+//         // Create a download link
+//         const downloadLink = document.createElement('a');
+//         downloadLink.href = dataURL;
+//         downloadLink.download = 'section_image.png';
+//         downloadLink.innerHTML = 'Download Image';
+
+//         const downloadContainer = document.getElementById('downloadImage');
+//         downloadContainer.innerHTML("downloadLink");
+
+//         console.log(downloadLink);
+
+//         // Clean up the SVG URL -- dont know what this means yet
+//         URL.revokeObjectURL(svgUrl);
+
+//     }
+
+// }
+
+function imageDownload() {
+    // Get the section element by its ID
+    var image = new Image();
+    const sectionElement = document.getElementById('popup');
+    domtoimage.toPng(sectionElement).then(function (dataUrl) {
+        // var image = new Image();
+        image.src = dataUrl;
+        // document.body.appendChild(image)
+        const downloadLink = document.createElement('a');
+        downloadLink.href = image.src;
+        downloadLink.download = 'Cart Items.png';
+        downloadLink.textContent = 'Download and Send the picture of your Cart';
+
+        const downloadContainer = document.getElementById('downloadImage');
+        downloadContainer.appendChild(downloadLink);
+
+        console.log(downloadLink)
+
+    }).catch(function (error) {
+        console.error('error found', error);
+    });
+    // Create a download link
+
+}
+
 // body.addEventListener("click", clicker);
 // function clicker() {
 //     if (menu.className == "bx bx-right-arrow-alt") {
