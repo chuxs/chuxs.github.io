@@ -71,17 +71,18 @@ window.onscroll = () => {
 
 // Click on a close button to hide the current list item
 var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-    close[i].onclick = function () {
-        var div = this.parentElement;
-        div.style.display = "none";
-    }
-}
+// var i;
+// for (i = 0; i < close.length; i++) {
+//     close[i].onclick = function () {
+//         var div = this.parentElement;
+//         div.style.display = "none";
+//     }
+// }
 
 // add items to cart
 var priceSum = 0;
 var price = 0;
+var priceClose = 0;
 
 function addToCart() {
     var li = document.createElement("li");
@@ -99,9 +100,26 @@ function addToCart() {
     span.appendChild(txt);
     li.appendChild(span);
 
+    //Basically this code is to subtract the price of the item you are closing
     for (i = 0; i < close.length; i++) {
         close[i].onclick = function () {
             var div = this.parentElement;
+
+            // Generate a random number within a specific range (e.g., between 1 and 1000)
+            //I am assiging a random value as id for every item i want to delete
+            var min = 1;
+            var max = 1000;
+            var randomRange = "random" + Math.floor(Math.random() * (max - min + 1)) + min;
+            console.log(randomRange);
+
+
+            div.id = randomRange;
+            var closeVaue = document.getElementById(randomRange).innerHTML;
+            const priceRegexClose = /\d+(\.\d{1,2})?/;
+            const matchesClose = closeVaue.match(priceRegexClose);
+            priceClose = parseFloat(matchesClose[0]);
+            priceSum = priceSum - priceClose;
+            document.getElementById("totalPrice").innerHTML = "Total $" + priceSum;
             div.style.display = "none";
         }
     }
