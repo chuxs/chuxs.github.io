@@ -70,7 +70,7 @@ window.onscroll = () => {
 
 
 // Click on a close button to hide the current list item
-var close = document.getElementsByClassName("close");
+
 // var i;
 // for (i = 0; i < close.length; i++) {
 //     close[i].onclick = function () {
@@ -80,6 +80,8 @@ var close = document.getElementsByClassName("close");
 // }
 
 // add items to cart
+
+var close = document.getElementsByClassName("close");
 var priceSum = 0;
 var price = 0;
 var priceClose = 0;
