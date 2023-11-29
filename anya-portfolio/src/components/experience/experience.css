@@ -1,0 +1,91 @@
+.experience__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.experience__container > div{
+    background: transparent;
+    /* background: var(--color-bg-variant); */
+    padding: 2.4rem 5rem;
+    border-radius: 2rem;
+    border: 1px solid var(--color-bg-variant);   
+    transition: var(--transition);
+}
+
+/* .experience__container > div:hover{
+    background: transparent;
+    border-color: var(--color-primary-variant);
+    cursor: default;
+    /* border: 1px solid var(--color-bg-variant);    
+} */
+
+.experience__container > div h3{
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--color-white);
+}
+
+.experience__content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2rem;
+}
+
+.experience__details{
+    display: flex;
+    gap: 1rem;
+}
+
+/* -----------Icon Color--------- */
+
+.general_icon{
+    margin-top: 6px;
+    color: var(--color-primary);
+}
+
+.azurecolor{
+    margin-top: 6px;
+    color: blue;
+}
+
+.microsoftoffice{
+    margin-top: 6px;
+    color: orangered;
+}
+
+.team_icon{
+    margin-top: 6px;
+    color: green;
+}
+
+.html_icon{
+    margin-top: 6px;
+    color: orangered;
+}
+
+.javascript_icon{
+    margin-top: 6px;
+    color: yellow;
+}
+
+.css_icon{
+    margin-top: 6px;
+    color: blue;
+}
+
+.node_icon{
+    margin-top: 6px;
+    color: green;
+    font-size: 20px;
+}
+
+.java_icon{
+    margin-top: 6px;
+    color: red;
+}
+
+.react_icon{
+    margin-top: 6px;
+    color: var(--color-primary);
+}

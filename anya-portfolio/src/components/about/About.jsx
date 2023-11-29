@@ -22,14 +22,14 @@ const About = () => {
           <div className="about__cards">
             <article className='about__card'>
               <RiAwardFill className='about__icon'/>
-              <h5>FrontEnd</h5>
-              <small>ReactJs</small>
+              <h5>Experience</h5>
+              <small>See</small>
             </article>
 
             <article className='about__card'>
               <GrCertificate className='about__icon'/>
               <h5>Certifications</h5>
-              <small>AZ-900</small>
+              <small>Azure</small>
               {/* <small>AZ-900: Azure Fundamentals</small> */}
               {/* <small>AZ-104: Azure Administrator</small> */}
             </article>
@@ -37,7 +37,7 @@ const About = () => {
             <article className='about__card'>
               <SiBlueprint className='about__icon'/>
               <h5>Projects</h5>
-              <small>Click Me</small>
+              <small>See</small>
             </article>
           </div>
 
