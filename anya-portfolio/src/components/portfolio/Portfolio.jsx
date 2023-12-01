@@ -3,7 +3,19 @@ import './portfolio.css'
 
 const Portfolio = () => {
   return (
-    <section id='portfolio'>Portfolio</section>
+    <section id='portfolio'>
+      <h5>My Recent Work</h5>
+      <h2>Projects</h2>
+
+      <div className="container portfolio__container">
+        <article className='portfolio__item'>
+          <div className="portfolio__item-image"></div>
+
+          <h3>This is a Poject Title</h3>
+          <a href="https://chuxs.github.io/ChuxLiveStore/index.html"> Demo </a>
+        </article>
+      </div>
+    </section>
   )
 }
 
