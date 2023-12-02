@@ -17,7 +17,7 @@
 .portfolio__item:hover{
     border-color: var(--color-primary-variant);
     background: transparent;
-    /* transform: scale(1.1); */
+    transform: scale(1.1);
 }
 
 .portfolio__item-image{
@@ -37,10 +37,16 @@
 
 /* ------------------Media Query (Medium Devices)---------------- */
 @media screen and (max-width: 1024px){
-  
+    .portfolio__container{
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+    }
 }
 
 /* ------------------Media Query (Medium Devices)---------------- */
 @media screen and (max-width: 600px){
-
+    .portfolio__container{
+        grid-template-columns: 1fr;
+        gap: 1;
+    }
 }
