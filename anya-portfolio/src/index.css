@@ -80,6 +80,7 @@ section > h2{
 a{
     color: var(--color-primary);
     transition: var(--transition);
+    font-size: 0.8rem;
 }
 
 a:hover{
