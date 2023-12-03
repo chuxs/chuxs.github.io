@@ -4,6 +4,9 @@ import ME2 from '../../assests/Anya_Me.jpg'
 import { RiAwardFill } from "react-icons/ri";
 import { GrCertificate } from "react-icons/gr";
 import { SiBlueprint } from "react-icons/si";
+// import {IoLogoJavascript} from 'react-icons/io5'
+// import {FaJava} from 'react-icons/fa'
+// import {SiMicrosoftazure} from 'react-icons/si'
 
 const About = () => {
   return (
@@ -23,13 +26,13 @@ const About = () => {
             <article className='about__card'>
               <RiAwardFill className='about__icon'/>
               <h5>Experience</h5>
-              <small>See</small>
+              <small>3+ Years</small>
             </article>
 
             <article className='about__card'>
               <GrCertificate className='about__icon'/>
               <h5>Certifications</h5>
-              <small>Azure</small>
+              <small>Azure, JavaScript  Java</small>
               {/* <small>AZ-900: Azure Fundamentals</small> */}
               {/* <small>AZ-104: Azure Administrator</small> */}
             </article>
@@ -37,7 +40,7 @@ const About = () => {
             <article className='about__card'>
               <SiBlueprint className='about__icon'/>
               <h5>Projects</h5>
-              <small>See</small>
+              <small>4+ Projects</small>
             </article>
           </div>
 

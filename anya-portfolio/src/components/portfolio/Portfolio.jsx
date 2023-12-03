@@ -23,23 +23,29 @@ const data = [
   {
     id:3,
     image: IMGC,
+    title: 'Previous Portfolio',
+    demo: 'https://chuxs.github.io/'
+  },
+  {
+    id:4,
+    image: IMGC,
     title: 'Food Ordering Service',
     demo: 'http://lulusnativekitchen.com/'
   },
   {
-    id:4,
+    id:5,
     image: IMGD,
     title: 'Google Map API Distance and Time Calculator',
     demo: 'https://chuxs.github.io/JavaScript Google Map Api Project/index.html'
   },
   {
-    id:5,
+    id:6,
     image: IMGE,
     title: 'Proactive Validation Form',
     demo: 'https://chuxs.github.io/JavaScript Form Validation/index.html'
   },
   {
-    id:6,
+    id:7,
     image: IMGF,
     title: 'Simple Calculator',
     demo: 'https://chuxs.github.io/Calculator/index.html'
