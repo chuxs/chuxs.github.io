@@ -6,6 +6,7 @@ import IMGC from '../../assests/lulusnativekitchen.png'
 import IMGD from '../../assests/Google map api Distance and time calculator.png'
 import IMGE from '../../assests/Proactive validation form.png'
 import IMGF from '../../assests/Simplecalculator.png'
+import IMGG from '../../assests/oldporfolio.png'
 
 const data = [
   {
@@ -22,7 +23,7 @@ const data = [
   },
   {
     id:3,
-    image: IMGC,
+    image: IMGG,
     title: 'Previous Portfolio',
     demo: 'https://chuxs.github.io/'
   },
