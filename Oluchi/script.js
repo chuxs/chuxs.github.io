@@ -200,17 +200,29 @@ function imageDownload() {
         const downloadLink = document.createElement('a');
         downloadLink.href = image.src;
         downloadLink.download = 'Cart Items.png';
-        downloadLink.textContent = 'Download and Send the picture of your Cart';
+        downloadLink.click();
+        // downloadLink.textContent = 'Download and Send the picture of your Cart';
 
-        const downloadContainer = document.getElementById('downloadImage');
-        downloadContainer.appendChild(downloadLink);
+        // const downloadContainer = document.getElementById('downloadImage');
+        // downloadContainer.appendChild(downloadLink);
 
         console.log(downloadLink)
+        
+        const olunumber = +2349014330242;
+        const cartmessage = downloadLink;
+
+        const urlmsg = "https://wa.me/" + olunumber + "?text="
+        + cartmessage + "can I get this";
+
+        window.open(urlmsg, ' blank').focus();
 
     }).catch(function (error) {
+
         console.error('error found', error);
     });
     // Create a download link
+
+
 
 }
 

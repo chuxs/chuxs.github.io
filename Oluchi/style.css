@@ -457,6 +457,10 @@ section .heading h2 {
     font-weight: bold;
 }
 
+#downloadImage{
+    visibility: hidden;
+}
+
 .print{
     position: absolute;
     cursor: pointer;
