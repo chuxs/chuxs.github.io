@@ -216,6 +216,11 @@ section .heading h2 {
     /* padding-left: 10px; */
 }
 
+.menu-container .box  ul .menuopt:hover{
+    color: #fff;
+    transition: .4s;
+}
+
 .order-contsiner {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(290px, auto));
@@ -457,9 +462,9 @@ section .heading h2 {
     font-weight: bold;
 }
 
-#downloadImage{
+/* #downloadImage{
     visibility: hidden;
-}
+} */
 
 .print{
     position: absolute;

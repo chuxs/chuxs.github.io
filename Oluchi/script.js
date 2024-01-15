@@ -189,43 +189,81 @@ function addToCart() {
 
 // }
 
-function imageDownload() {
-    // Get the section element by its ID
-    var image = new Image();
-    const sectionElement = document.getElementById('popup');
-    domtoimage.toPng(sectionElement).then(function (dataUrl) {
-        // var image = new Image();
-        image.src = dataUrl;
-        // document.body.appendChild(image)
-        const downloadLink = document.createElement('a');
-        downloadLink.href = image.src;
-        downloadLink.download = 'Cart Items.png';
-        downloadLink.click();
-        // downloadLink.textContent = 'Download and Send the picture of your Cart';
+// function imageDownload() {
+//     // Get the section element by its ID
+//     var image = new Image();
+//     const sectionElement = document.getElementById('popup');
+//     domtoimage.toPng(sectionElement).then(function (dataUrl) {
+//         // var image = new Image();
+//         image.src = dataUrl;
+//         // document.body.appendChild(image)
+//         const downloadLink = document.createElement('a');
+//         downloadLink.href = image.src;
+//         downloadLink.download = 'Cart Items.png';
+//         downloadLink.click();
+//         // downloadLink.textContent = 'Download and Send the picture of your Cart';
 
-        // const downloadContainer = document.getElementById('downloadImage');
-        // downloadContainer.appendChild(downloadLink);
+//         // const downloadContainer = document.getElementById('downloadImage');
+//         // downloadContainer.appendChild(downloadLink);
+//         const sendimg = encodeURIComponent(dataUrl);
 
-
-        console.log(downloadLink)
+//         console.log(downloadLink)
         
-        const olunumber = +2349014330242;
-        const cartmessage = downloadLink;
+//         const olunumber = +2349014330242;
 
-        const urlmsg = "https://wa.me/" + olunumber + "?text="
-        + cartmessage + "can I get this";
+//         const urlmsg = "https://wa.me/" + olunumber + "?text="
+//         + sendimg + "  Can I get this?";
 
-        window.open(urlmsg, ' blank').focus();
+//         // encodeURIComponent(downloadLink) 
+//         window.open(urlmsg, ' blank').focus();
 
-    }).catch(function (error) {
+//     }).catch(function (error) {
 
-        console.error('error found', error);
-    });
-    // Create a download link
+//         console.error('error found', error);
+//     });
+//     // Create a download link
 
 
 
+// }
+
+function imageDownload() {
+    const sectionElement = document.getElementById('popup');
+
+    domtoimage.toPng(sectionElement)
+        .then(function (dataUrl) {
+            const downloadLink = document.createElement('a');
+            downloadLink.href = dataUrl;
+            downloadLink.download = 'Cart_Items.png';
+            downloadLink.click();
+
+            const downloadContainer = document.getElementById('downloadImage');
+            downloadContainer.appendChild(downloadLink);
+            
+            // Select all list items within the ul element inside the div inside the section
+            var listItems = document.querySelectorAll('#popup #firstdiv-pop #lastdiv-pop ul li');
+
+            // Create an array to store the values of list items
+            var listItemValues = [];
+
+            // Iterate through the NodeList and save each list item value to the array
+            listItems.forEach(function (item) {
+              listItemValues.push(item.textContent);
+            });
+
+            const finalList = listItemValues.join('\n');
+
+            const oluNumber = '+2349014330242';
+
+            const urlMsg = 'https://wa.me/' + oluNumber + '?text=' + finalList + '  Can I get these';
+
+            window.open(urlMsg, '_blank').focus();
+        })
+        .catch(function (error) {
+            console.error('Error found', error);
+        });
 }
+
 
 // body.addEventListener("click", clicker);
 // function clicker() {

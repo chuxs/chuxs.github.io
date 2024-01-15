@@ -82,49 +82,49 @@
           <div class="menu-container">
                <div class="box">
                     <ul>
-                         <li onclick="addToCart()" id="shrimps" >Shrimps $5</li>
-                         <li onclick="addToCart()" id="chicken" >Chicken $5</li>
-                         <li onclick="addToCart()" id="beef" >Beef $5</li>
-                         <li onclick="addToCart()" id="gizzard" >Gizzard $5</li>
-                         <li onclick="addToCart()" id="salmon" >Salmon $8</li>
+                         <li onclick="addToCart()" class="menuopt" id="shrimps" >Shrimps $5</li>
+                         <li onclick="addToCart()" class="menuopt" id="chicken" >Chicken $5</li>
+                         <li onclick="addToCart()" class="menuopt" id="beef" >Beef $5</li>
+                         <li onclick="addToCart()" class="menuopt" id="gizzard" >Gizzard $5</li>
+                         <li onclick="addToCart()" class="menuopt" id="salmon" >Salmon $8</li>
                          <!-- <li href="#">Tilapia Fish $5</li> -->
                     </ul>
                </div>
 
                <div class="box">
                     <ul>
-                         <li onclick="addToCart()" id="fired" >Fried Rice $20</li>
-                         <li onclick="addToCart()" id="jellof" >Jellof Rice $25</li>
-                         <li onclick="addToCart()" id="banga" >Banga Rice $25</li>
-                         <li onclick="addToCart()" id="coconu" >Coconut Rice $20</li>
-                         <li onclick="addToCart()" id="pasta" >Pasta $30</li>
+                         <li onclick="addToCart()" class="menuopt" id="fired" >Fried Rice $20</li>
+                         <li onclick="addToCart()" class="menuopt" id="jellof" >Jellof Rice $25</li>
+                         <li onclick="addToCart()" class="menuopt" id="banga" >Banga Rice $25</li>
+                         <li onclick="addToCart()" class="menuopt" id="coconu" >Coconut Rice $20</li>
+                         <li onclick="addToCart()" class="menuopt" id="pasta" >Pasta $30</li>
                     </ul>
                </div>
                <div class="box">
                     <ul>
-                         <li onclick="addToCart()" id="okra" >Okra soup $120</li>
-                         <li onclick="addToCart()" id="afang" >Afang soup </li>
-                         <li onclick="addToCart()" id="banga" >Banga soup</li>
-                         <li onclick="addToCart()" id="Egusi" >Egusi soup $150</li>
-                         <li onclick="addToCart()" id="Efo" >Efo Riro $120</li>
+                         <li onclick="addToCart()" class="menuopt" id="okra" >Okra soup $120</li>
+                         <li onclick="addToCart()" class="menuopt" id="afang" >Afang soup </li>
+                         <li onclick="addToCart()" class="menuopt" id="banga" >Banga soup</li>
+                         <li onclick="addToCart()" class="menuopt" id="Egusi" >Egusi soup $150</li>
+                         <li onclick="addToCart()" class="menuopt" id="Efo" >Efo Riro $120</li>
 
                     </ul>
                </div>
                <div class="box">
                     <ul>
-                         <li onclick="addToCart()" id="cat-fish-psoup" >Cat fish pepper soup $25</li>
-                         <li onclick="addToCart()" id="goat-psoup" >Goat meat pepper soup $25</li>
-                         <li onclick="addToCart()" id="salmon-psoup" >Chicken pepper soup $20</li>
+                         <li onclick="addToCart()" class="menuopt" id="cat-fish-psoup" >Cat fish pepper soup $25</li>
+                         <li onclick="addToCart()" class="menuopt" id="goat-psoup" >Goat meat pepper soup $25</li>
+                         <li onclick="addToCart()" class="menuopt" id="salmon-psoup" >Chicken pepper soup $20</li>
 
                     </ul>
                </div>
                <div class="box">
                     <ul>
-                         <li onclick="addToCart()" id="moi" >Moi Moi (Fish, Egg, Minced Meat)</li>
-                         <li onclick="addToCart()" id="beef-pot" >Beef potatoes (minced meat, stew beef) $25</li>
-                         <li onclick="addToCart()" id="chicken-pot" >Chicken potatoes (minced chicken, wings) $25</li>
-                         <li onclick="addToCart()" id="plantain-por" >Plantain porridge</li>
-                         <li onclick="addToCart()" id="Bole" >Bole</li>
+                         <li onclick="addToCart()" class="menuopt" id="moi" >Moi Moi (Fish, Egg, Minced Meat)</li>
+                         <li onclick="addToCart()" class="menuopt" id="beef-pot" >Beef potatoes (minced meat, stew beef) $25</li>
+                         <li onclick="addToCart()" class="menuopt" id="chicken-pot" >Chicken potatoes (minced chicken, wings) $25</li>
+                         <li onclick="addToCart()" class="menuopt" id="plantain-por" >Plantain porridge</li>
+                         <li onclick="addToCart()" class="menuopt" id="Bole" >Bole</li>
 
                     </ul>
                </div>
@@ -204,12 +204,12 @@
 
      <!-- Pop up section -->
      <section id="popup">
-          <div class="popup-content">
+          <div id="firstdiv-pop" class="popup-content">
                <div class="popup-header">
                     <h2>Cart Items</h2>
                     <span class="close-btn"><i class='bx bx-x'></i></span>
                </div>
-               <div class="popup-body">
+               <div id="lastdiv-pop" class="popup-body">
                     <ul id="myUL">
                          <!-- <li></li> -->
                     </ul>
@@ -218,7 +218,7 @@
                     <h3 id="totalPrice">Total: $</h3>
                     <span class="print" onclick="imageDownload()">Send to us</span>
                </div>
-               <!-- <div id="downloadImage"></div> -->
+               <div id="downloadImage"> </div>
           </div>
      </section>
 
