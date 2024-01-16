@@ -251,7 +251,7 @@ function imageDownload() {
               listItemValues.push(item.textContent);
             });
 
-            const finalList = listItemValues.join('                                                                                                                                                                                 <\n>');
+            const finalList = listItemValues.join('                                                                                                                                                                                  ');
 
             const oluNumber = '+2349014330242';
 
