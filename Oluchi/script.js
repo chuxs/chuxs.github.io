@@ -251,11 +251,11 @@ function imageDownload() {
               listItemValues.push(item.textContent);
             });
 
-            const finalList = listItemValues.join('\n');
+            const finalList = listItemValues.join('                                                                                                                                                                                 <\n>');
 
             const oluNumber = '+2349014330242';
 
-            const urlMsg = 'https://wa.me/' + oluNumber + '?text=' + finalList + '  Can I get these';
+            const urlMsg = 'https://wa.me/' + oluNumber + '?text=' + finalList  + '  Can I get these';
 
             window.open(urlMsg, '_blank').focus();
         })
