@@ -251,11 +251,17 @@ function imageDownload() {
               listItemValues.push(item.textContent);
             });
 
-            const finalList = listItemValues.join('                                                                                                                                                                                  ');
+            // const finalList = listItemValues.join('                                                                                                                                                                                  ');
 
-            const oluNumber = '+2349014330242';
+            const spaces = " ".repeat(190);
 
-            const urlMsg = 'https://wa.me/' + oluNumber + '?text=' + finalList  + '  Can I get these';
+            const finalList = listItemValues.join(spaces);
+
+            const oluNumber = '+17206547003';
+
+            const totalDisplayPrice = document.getElementById("totalPrice").innerHTML;
+
+            const urlMsg = 'https://wa.me/' + oluNumber + '?text=' + finalList  + '%0A' + totalDisplayPrice + '%0A' + 'Can I get these';
 
             window.open(urlMsg, '_blank').focus();
         })
