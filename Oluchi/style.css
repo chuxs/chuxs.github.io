@@ -57,6 +57,12 @@ body header {
     transition: .4s;
 }
 
+.navbar li a span {
+    position: relative;
+    display: none;
+    visibility: hidden;
+}
+
 #menu-icon {
     font-size: 1.5rem;
     cursor: pointer;

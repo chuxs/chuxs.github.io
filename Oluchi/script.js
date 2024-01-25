@@ -133,6 +133,7 @@ function addToCart() {
             cartCountElement2.textContent = cartCount--;
         }
     }
+
     // getting the price of the food item
     const priceRegex = /\d+(\.\d{1,2})?/;
     const matches = inputValue.match(priceRegex);
@@ -148,6 +149,14 @@ function addToCart() {
     cartCount++;
       updateCartCount();
       alert(`Added ${inputValue} to the cart!`);
+
+      // Delay for 1.5 seconds (1500 milliseconds) and then close the alert
+      setTimeout(function() {
+        const alertBox = document.querySelector(".alert");
+        if (alertBox) {
+          alertBox.style.display = "none";
+        }
+      }, 1500);
 }
 
 //adding the count cont..
@@ -156,6 +165,7 @@ function updateCartCount(){
     // Display the count at the top of the cart icon and make it visible
     cartCountElement.textContent = cartCount;
     cartCountElement.style.display = 'inline';
+    cartCountElement.style.visibility = 'visible';
 }
 
 //Convert the list of items to an image and download it
