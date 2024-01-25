@@ -86,6 +86,11 @@ var priceSum = 0;
 var price = 0;
 var priceClose = 0;
 
+
+//add item to cart and adding the cart count to the cart icon
+let cartCount = 0;
+
+
 function addToCart() {
     var li = document.createElement("li");
     var inputValue = document.getElementById(event.currentTarget.id).innerHTML;
@@ -123,6 +128,9 @@ function addToCart() {
             priceSum = priceSum - priceClose;
             document.getElementById("totalPrice").innerHTML = "Total $" + priceSum;
             div.style.display = "none";
+
+            const cartCountElement2 = document.getElementById('cart-count')
+            cartCountElement2.textContent = cartCount--;
         }
     }
     // getting the price of the food item
@@ -135,6 +143,19 @@ function addToCart() {
         priceSum = priceSum + price;
         document.getElementById("totalPrice").innerHTML = "Total $" + priceSum;
     }
+
+    //adding the count
+    cartCount++;
+      updateCartCount();
+      alert(`Added ${inputValue} to the cart!`);
+}
+
+//adding the count cont..
+function updateCartCount(){
+    const cartCountElement = document.getElementById('cart-count')
+    // Display the count at the top of the cart icon and make it visible
+    cartCountElement.textContent = cartCount;
+    cartCountElement.style.display = 'inline';
 }
 
 //Convert the list of items to an image and download it
