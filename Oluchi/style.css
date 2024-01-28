@@ -57,7 +57,16 @@ body header {
     transition: .4s;
 }
 
-.navbar li a span {
+
+/* notify item has been added to the cart when using laptop */
+.navbar li a #cart-notify {
+    position: relative;
+    display: none;
+    visibility: hidden;
+}
+
+/* notify item has been added to the cart when using phone or tablet size screen */
+header div i {
     position: relative;
     display: none;
     visibility: hidden;
