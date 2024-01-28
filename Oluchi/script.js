@@ -30,11 +30,17 @@ let navbar = document.querySelector(".navbar");
 let cartbtn = document.getElementById("cartbtn");
 let popup = document.getElementById("popup");
 let closebtn = document.getElementsByClassName("close-btn")[0];
+let checkoutButton = document.getElementById('checkoutButton');
 
 cartbtn.onclick = function () {
     popup.classList.add("show");
     navbar.classList.remove("active");
     document.getElementById(menu).className = "bx bx-menu";
+}
+
+checkoutButton.onclick = function () {
+    popup.classList.add("show");
+    navbar.classList.remove("active");
 }
 
 closebtn.onclick = function () {
@@ -72,7 +78,6 @@ window.onscroll = () => {
 // }
 
 // add items to cart
-
 var close = document.getElementsByClassName("close");
 var priceSum = 0;
 var price = 0;
@@ -80,7 +85,6 @@ var priceClose = 0;
 
 
 //add item to cart and signify item cart has an item
-
 
 function addToCart() {
     var li = document.createElement("li");
@@ -136,10 +140,11 @@ function addToCart() {
         document.getElementById("totalPrice").innerHTML = "Total $" + priceSum;
     }
 
-    //adding the count
+    //adding the item notification
     updateCartCount();
-    // alert(`Added ${inputValue} to the cart!`);
-
+    
+    
+    checkoutButton.classList.remove('hidden');
  
 }
 
@@ -166,7 +171,7 @@ function imageDownload() {
         .then(function (dataUrl) {
             const downloadLink = document.createElement('a');
             downloadLink.href = dataUrl;
-            downloadLink.download = 'Cart_Items.png';
+            downloadLink.download = 'Your Receipt.png';
             downloadLink.click();
 
             const downloadContainer = document.getElementById('downloadImage');

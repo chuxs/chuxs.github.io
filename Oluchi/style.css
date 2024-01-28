@@ -10,6 +10,25 @@
     scroll-behavior: smooth;
 }
 
+.floating-button {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #bd937a;;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    font-size: medium;
+  }
+  
+  .floating-button.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
 body {
     color: black;
     /* background: #161c2a; */
