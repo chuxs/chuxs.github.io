@@ -89,8 +89,8 @@ const observer = new MutationObserver(function(mutationsList) {
     }
   });
   
-  // Start observing changes to the <ul> element
-  observer.observe(liEventListen, { childList: true });
+// Start observing changes to the <ul> element
+observer.observe(liEventListen, { childList: true });
 
 menu.addEventListener("click", function () {
     navbar.classList.toggle("active")
