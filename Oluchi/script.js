@@ -56,18 +56,6 @@ closebtn.onclick = function () {
 //MutationObserver for the popup. I use this to see if there are any list in the UL.
 //If there are none, then remove the menu notification and the checkoutbutton
 
-// const observer = new MutationObserver(() => {
-//     if (liEventListen.children.length === 0) {
-//       console.log('The <ul> has no list items in it!');
-//       cartCountElement.style.visibility = 'hidden';
-//       cartCountElement2.style.visibility = 'hidden';
-//       alert('it works!!');
-//     }
-//   });
-
-// // Start observing changes to the <ul> element
-// observer.observe(liEventListen, { childList: true, subtree: true });
-
 // Create a new MutationObserver
 
 const observer = new MutationObserver(function(mutationsList) {
@@ -79,6 +67,7 @@ const observer = new MutationObserver(function(mutationsList) {
   
         if (hasListItems) {
         //   console.log("The <ul> has list items.");
+        checkoutButton.style.visibility = 'visible';
         } else {
         //   console.log("The <ul> does not have any list items.");
           cartCountElement.style.visibility = 'hidden';
