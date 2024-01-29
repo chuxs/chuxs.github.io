@@ -31,21 +31,66 @@ let cartbtn = document.getElementById("cartbtn");
 let popup = document.getElementById("popup");
 let closebtn = document.getElementsByClassName("close-btn")[0];
 let checkoutButton = document.getElementById('checkoutButton');
+let liEventListen = document.getElementById('myUL')
+let cartCountElement = document.getElementById('cart-notify')
+let cartCountElement2 = document.getElementById('cart-notify2')
 
+//Display the items in checkout (popup)
 cartbtn.onclick = function () {
     popup.classList.add("show");
     navbar.classList.remove("active");
     document.getElementById(menu).className = "bx bx-menu";
 }
 
+//CLick the checkout button on the right corner to display checkout 
 checkoutButton.onclick = function () {
     popup.classList.add("show");
     navbar.classList.remove("active");
 }
 
+//close cart or popup
 closebtn.onclick = function () {
     popup.classList.remove("show");
 }
+
+//MutationObserver for the popup. I use this to see if there are any list in the UL.
+//If there are none, then remove the menu notification and the checkoutbutton
+
+// const observer = new MutationObserver(() => {
+//     if (liEventListen.children.length === 0) {
+//       console.log('The <ul> has no list items in it!');
+//       cartCountElement.style.visibility = 'hidden';
+//       cartCountElement2.style.visibility = 'hidden';
+//       alert('it works!!');
+//     }
+//   });
+
+// // Start observing changes to the <ul> element
+// observer.observe(liEventListen, { childList: true, subtree: true });
+
+// Create a new MutationObserver
+
+const observer = new MutationObserver(function(mutationsList) {
+    // Check if any mutations occurred
+    for(let mutation of mutationsList) {
+      if (mutation.type === 'childList') {
+        // Check if <ul> has any <li> elements after mutation
+        const hasListItems = liEventListen.getElementsByTagName("li").length > 0;
+  
+        if (hasListItems) {
+        //   console.log("The <ul> has list items.");
+        } else {
+        //   console.log("The <ul> does not have any list items.");
+          cartCountElement.style.visibility = 'hidden';
+          cartCountElement2.style.visibility = 'hidden';
+          checkoutButton.style.visibility = 'hidden';
+        }
+      }
+    }
+  });
+  
+  // Start observing changes to the <ul> element
+  observer.observe(liEventListen, { childList: true });
 
 menu.addEventListener("click", function () {
     navbar.classList.toggle("active")
@@ -58,24 +103,11 @@ menu.addEventListener("click", function () {
     // }
 });
 
-
-
 window.onscroll = () => {
     navbar.classList.remove("active");
     // document.getElementById(menu-icon).className = "bx bx-menu";
 };
 
-
-
-// Click on a close button to hide the current list item
-
-// var i;
-// for (i = 0; i < close.length; i++) {
-//     close[i].onclick = function () {
-//         var div = this.parentElement;
-//         div.style.display = "none";
-//     }
-// }
 
 // add items to cart
 var close = document.getElementsByClassName("close");
@@ -123,9 +155,8 @@ function addToCart() {
             priceSum = priceSum - priceClose;
             document.getElementById("totalPrice").innerHTML = "Total $" + priceSum;
             div.style.display = "none";
-
-            const cartCountElement2 = document.getElementById('cart-count')
-            cartCountElement2.textContent = cartCount--;
+            var removeChild = document.getElementById("myUL");
+            removeChild.removeChild(div);
         }
     }
 
@@ -150,8 +181,7 @@ function addToCart() {
 
 //adding the count cont..
 function updateCartCount(){
-    const cartCountElement = document.getElementById('cart-notify')
-    const cartCountElement2 = document.getElementById('cart-notify2')
+
     // Display the count at the top of the cart icon and make it visible
     cartCountElement.style.display = 'inline';
     cartCountElement.style.visibility = 'visible';
