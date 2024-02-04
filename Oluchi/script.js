@@ -188,14 +188,7 @@ function imageDownload() {
 
     domtoimage.toPng(sectionElement)
         .then(function (dataUrl) {
-            const downloadLink = document.createElement('a');
-            downloadLink.href = dataUrl;
-            downloadLink.download = 'Your Receipt.png';
-            downloadLink.click();
 
-            const downloadContainer = document.getElementById('downloadImage');
-            downloadContainer.appendChild(downloadLink);
-            
             // Select all list items within the ul element inside the div inside the section
             var listItems = document.querySelectorAll('#popup #firstdiv-pop #lastdiv-pop ul li');
 
@@ -204,22 +197,25 @@ function imageDownload() {
 
             // Iterate through the NodeList and save each list item value to the array
             listItems.forEach(function (item) {
-              listItemValues.push(item.textContent);
-            });
+                listItemValues.push(item.textContent);
+              });
 
-            // const finalList = listItemValues.join('                                                                                                                                                                                  ');
-
+            //Send the list of items in the cart to whatsapp
             const spaces = " ".repeat(190);
-
             const finalList = listItemValues.join(spaces);
-
             const oluNumber = '+17206547003';
-
             const totalDisplayPrice = document.getElementById("totalPrice").innerHTML;
-
             const urlMsg = 'https://wa.me/' + oluNumber + '?text=' + finalList  + '%0A' + totalDisplayPrice + '%0A' + 'Can I get these';
-
             window.open(urlMsg, '_blank').focus();
+
+            //after sending to whatsapp, then download the image
+            const downloadLink = document.createElement('a');
+            downloadLink.href = dataUrl;
+            downloadLink.download = 'Your Receipt.png';
+            downloadLink.click();
+
+            const downloadContainer = document.getElementById('downloadImage');
+            downloadContainer.appendChild(downloadLink);
         })
         .catch(function (error) {
             console.error('Error found', error);
