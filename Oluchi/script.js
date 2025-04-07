@@ -203,7 +203,7 @@ function imageDownload() {
             //Send the list of items in the cart to whatsapp
             const spaces = " ".repeat(190);
             const finalList = listItemValues.join(spaces);
-            const oluNumber = '+17206547003';
+            const oluNumber = '+2348020352170';
             const totalDisplayPrice = document.getElementById("totalPrice").innerHTML;
             const urlMsg = 'https://wa.me/' + oluNumber + '?text=' + finalList  + '%0A' + totalDisplayPrice + '%0A' + 'Can I get these';
             window.open(urlMsg, '_blank').focus();
