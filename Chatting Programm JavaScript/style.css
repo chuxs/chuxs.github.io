@@ -272,6 +272,13 @@ ul{
 
 /* ------------------Media Query (Medium Devices)---------------- */
 @media screen and (max-width: 600px){
+    .stack-grid{
+        margin-top: 1rem;
+    }
+
+    .stack-style{
+        min-height: 1000px;
+    }
     .experience__container{
         gap: 1rem;
     }
@@ -289,6 +296,10 @@ ul{
     .duplicate{
         width: 80%;
         margin-left: 10%;
+    }
+
+    ul{
+        height: 300px;
     }
     .list2{
         margin-right: 70%;
