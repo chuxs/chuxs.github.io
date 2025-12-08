@@ -409,18 +409,22 @@ ul::-webkit-scrollbar-thumb:hover {
   }
   
   .message {
-    height: 42px;
+    height: 44px;
     font-size: 0.85rem;
   }
   
   .sendbutton {
-    height: 42px;
-    padding: 0 1rem;
-    font-size: 0.8rem;
+    height: 44px;
+    min-width: 50px;
+    padding: 0 0.875rem;
+    font-size: 0;
+    background: var(--accent);
+    box-shadow: var(--shadow-md);
   }
   
-  .sendbutton span {
-    display: none;
+  .sendbutton svg {
+    width: 22px;
+    height: 22px;
   }
   
   .refresh {
