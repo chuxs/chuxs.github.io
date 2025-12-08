@@ -1,44 +1,55 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Basic Chat App</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Chat App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-    <link rel="stylesheet" href="style.css">
-  </head>
+<body>
 
-  <body>
- 
-    <section class="stack-style" id="feat">
+  <section class="stack-style" id="feat">
+    <div class="stack-grid experience__container">
+      <header class="chat-header">
+        <h1>Chat App</h1>
+        <p>Duplicate the tab or open on another device to simulate two endpoints communicating</p>
+      </header>
 
-      <div class="stack-grid experience__container">
-            <h3>A basic communication app. </h3>
-            <p>Duplicate the browser tab or open the link on another device to simulate two endpoints communicating</p>
-        <div class="feature-stack">
+      <div class="feature-stack">
+        <div class="experience__content">
+          <div class="username-wrapper">
+            <input class="username" id="username" placeholder="Enter your username" autocomplete="off">
+          </div>
 
-          <div class="experience__content">
-                 <input class="username" id="username" placeholder="Enter you User Name">
-                  <ul id="dmessages"> 
-        
-                  </ul>
+          <ul id="dmessages"></ul>
 
-                  <div class="sendMessage">
-                <input class="message" id="message" placeholder="message" autocomplete="off">
+          <div class="sendMessage">
+            <input class="message" id="message" placeholder="Type a message..." autocomplete="off">
+            <button class="sendbutton" onclick="return sendMessage();">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+              Send
+            </button>
+          </div>
 
-                <button class="sendbutton" onclick="return sendMessage();"> Send </button>
-                </div> 
-
-               <button class="refresh" onclick="return deleteMessage();"> Delete/Refresh</button>
-           </div>
-       </div>
+          <button class="refresh" onclick="return deleteMessage();">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="3 6 5 6 21 6"></polyline>
+              <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+            </svg>
+            Clear Chat
+          </button>
+        </div>
+      </div>
     </div>
-    </section>
-    <script src="script.js" type="module">
-      
-    </script>
+  </section>
 
-   </body>
+  <script src="script.js" type="module"></script>
+
+</body>
 
 </html>
