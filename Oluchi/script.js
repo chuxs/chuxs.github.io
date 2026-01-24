@@ -1,12 +1,33 @@
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("navbar").style.top = "0";
-
+// Header scroll effect
+window.addEventListener('scroll', function() {
+    const header = document.getElementById('header');
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
     } else {
-        document.getElementById("navbar").style.top = "-50px";
-
+        header.classList.remove('scrolled');
     }
-}
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && href !== '#cart') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                const headerOffset = 80;
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    });
+});
 
 window.onscroll = function () { anotherScrollFunction() };
 
@@ -68,10 +89,16 @@ const observer = new MutationObserver(function(mutationsList) {
         if (hasListItems) {
         //   console.log("The <ul> has list items.");
         checkoutButton.style.visibility = 'visible';
+        // Update cart count display
+        updateCartCount();
         } else {
         //   console.log("The <ul> does not have any list items.");
+          cartCountElement.style.display = 'none';
           cartCountElement.style.visibility = 'hidden';
+          cartCountElement.style.opacity = '0';
+          cartCountElement2.style.display = 'none';
           cartCountElement2.style.visibility = 'hidden';
+          cartCountElement2.style.opacity = '0';
           checkoutButton.style.visibility = 'hidden';
         }
       }
@@ -170,15 +197,27 @@ function addToCart() {
 
 //adding the count cont..
 function updateCartCount(){
-
+    // Get current cart count
+    const cartItems = document.getElementById('myUL').getElementsByTagName('li').length;
+    
     // Display the count at the top of the cart icon and make it visible
-    cartCountElement.style.display = 'inline';
+    cartCountElement.style.display = 'inline-block';
     cartCountElement.style.visibility = 'visible';
     cartCountElement.style.color = 'white';
+    cartCountElement.style.opacity = '1';
+    // Show the count number if more than 0
+    if (cartItems > 0) {
+        cartCountElement.textContent = cartItems;
+    }
 
-    cartCountElement2.style.display = 'inline';
+    cartCountElement2.style.display = 'inline-block';
     cartCountElement2.style.visibility = 'visible';
     cartCountElement2.style.color = 'white';
+    cartCountElement2.style.opacity = '1';
+    // Show the count number if more than 0
+    if (cartItems > 0) {
+        cartCountElement2.textContent = cartItems;
+    }
 }
 
 
